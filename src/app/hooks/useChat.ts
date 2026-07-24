@@ -11,7 +11,7 @@ export type Message = {
     text: string;
 };
 
-const WS_URL = process.env.NEXT_PUBLIC_WS_URL ?? "ws://3.7.55.174:8080";
+const WS_URL = process.env.NEXT_PUBLIC_WS_URL??"ws://localhost:8080"; // Default to localhost if not set
 const RECONNECT_DELAY_MS = 2000;
 
 function generateSafeId(): string {
